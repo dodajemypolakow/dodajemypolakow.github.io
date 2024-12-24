@@ -4,203 +4,187 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Grupa "Dodajemy Polaków" na WhatsApp</title>
+	<!-- Link do AOS (Animate On Scroll) -->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
 	<style>
-    	body {
-        	font-family: Arial, sans-serif;
-        	margin: 0;
-        	padding: 0;
-        	background-color: #f4f4f4;
-        	color: #333333;
-        	line-height: 1.6;
-    	}
+		/* Ogólne style */
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
 
-    	header {
-        	background-color: #1e1e1e;
-        	color: #ffffff;
-        	padding: 20px 0;
-        	text-align: center;
-        	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    	}
+		body {
+			font-family: 'Arial', sans-serif;
+			background: linear-gradient(to bottom, #f4f4f4, #e8e8e8);
+			color: #333333;
+			line-height: 1.6;
+			min-height: 100vh;
+			overflow-x: hidden;
+		}
 
-    	nav {
-        	text-align: center;
-        	margin: 10px 0;
-    	}
+		header {
+			background: linear-gradient(90deg, #ff7e5f, #feb47b);
+			color: #ffffff;
+			text-align: center;
+			padding: 20px 0;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+			border-bottom-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+		}
 
-    	nav a {
-        	color: #1e1e1e;
-        	text-decoration: none;
-        	margin: 0 15px;
-        	font-weight: bold;
-        	padding: 5px 10px;
-        	border-radius: 5px;
-    	}
+		header h1 {
+			font-size: 2.5rem;
+			letter-spacing: 1px;
+		}
 
-    	nav a:hover {
-        	background-color: #1e1e1e;
-        	color: #ffffff;
-    	}
+		nav {
+			display: flex;
+			justify-content: center;
+			margin: 20px 0;
+		}
 
-    	main {
-        	padding: 20px;
-    	}
+		nav a {
+			text-decoration: none;
+			margin: 0 15px;
+			padding: 10px 20px;
+			color: #ffffff;
+			background: #ff7e5f;
+			border-radius: 20px;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
 
-    	h1, h2, h3 {
-        	text-align: center;
-    	}
+		nav a:hover {
+			transform: scale(1.1);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
 
-    	footer {
-        	background-color: #1e1e1e;
-        	color: #ffffff;
-        	text-align: center;
-        	padding: 10px 20px;
-        	position: fixed;
-        	bottom: 0;
-        	width: 100%;
-    	}
+		main {
+			padding: 40px 20px;
+		}
 
-    	.admin-list, .goals {
-        	margin: 20px auto;
-        	max-width: 800px;
-        	background: #ffffff;
-        	padding: 20px;
-        	border-radius: 10px;
-        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    	}
+		section {
+			margin: 40px 0;
+			padding: 20px;
+			border-radius: 10px;
+			background: #ffffff;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s;
+		}
 
-    	.admin-list img {
-        	border-radius: 50%;
-        	width: 100px;
-        	height: 100px;
-        	margin: 10px;
-    	}
+		section:hover {
+			transform: scale(1.02);
+		}
 
-    	.admin {
-        	display: flex;
-        	align-items: center;
-        	margin-bottom: 20px;
-    	}
+		h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			font-size: 2rem;
+			color: #ff7e5f;
+		}
 
-    	.admin img {
-        	margin-right: 15px;
-    	}
+		ul {
+			list-style-type: disc;
+			padding-left: 20px;
+		}
 
-    	.faq-item {
-        	margin-bottom: 20px;
-    	}
+		.faq-item {
+			margin-bottom: 20px;
+		}
 
-    	.faq-item h3 {
-        	margin: 0;
-    	}
+		.faq-item h3 {
+			font-size: 1.2rem;
+			margin-bottom: 10px;
+		}
 
-    	.cta-button {
-        	display: inline-block;
-        	background-color: #1e1e1e;
-        	color: #ffffff;
-        	text-decoration: none;
-        	padding: 10px 20px;
-        	border-radius: 5px;
-        	margin-top: 20px;
-        	text-align: center;
-        	transition: background-color 0.3s;
-    	}
+		.cta-button {
+			display: inline-block;
+			background: #ff7e5f;
+			color: #ffffff;
+			text-decoration: none;
+			padding: 10px 20px;
+			border-radius: 20px;
+			margin-top: 20px;
+			text-align: center;
+			font-weight: bold;
+			transition: transform 0.3s, box-shadow 0.3s;
+		}
 
-    	.cta-button:hover {
-        	background-color: #333333;
-    	}
+		.cta-button:hover {
+			transform: scale(1.1);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+		}
 
-    	.image-section {
-        	display: flex;
-        	justify-content: center;
-        	align-items: center;
-        	gap: 15px;
-        	margin-top: 20px;
-    	}
-
-    	.image-section img {
-        	max-width: 100%;
-        	height: auto;
-        	border-radius: 10px;
-        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    	}
-
-    	.rules {
-        	margin: 20px auto;
-        	max-width: 800px;
-        	background: #ffffff;
-        	padding: 20px;
-        	border-radius: 10px;
-        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    	}
-
-    	.rules ul {
-        	list-style: none;
-        	padding: 0;
-    	}
-
-    	.rules li {
-        	margin: 10px 0;
-    	}
+		footer {
+			text-align: center;
+			background: #333333;
+			color: #ffffff;
+			padding: 20px;
+			border-top-left-radius: 20px;
+			border-top-right-radius: 20px;
+		}
 	</style>
 </head>
 <body>
 	<header>
-    	<h1>Dodajemy Polaków</h1>
-    	<p>Totalnie Polska grupa na WhatsApp!</p>
+		<h1 data-aos="fade-down">Dodajemy Polaków</h1>
+		<p data-aos="fade-up">Totalnie Polska grupa na WhatsApp!</p>
 	</header>
 
 	<nav>
-    	<a href="#homepage">Strona Główna</a>
-    	<a href="#faq">FAQ</a>
-    	<a href="#admin">Administracja</a>
-    	<a href="#rules">Zasady</a>
+		<a href="#homepage" data-aos="zoom-in">Strona Główna</a>
+		<a href="#faq" data-aos="zoom-in" data-aos-delay="100">FAQ</a>
+		<a href="#rules" data-aos="zoom-in" data-aos-delay="200">Zasady</a>
 	</nav>
 
 	<main>
-    	<section id="homepage">
-        	<h2>Witaj w Naszej Grupie!</h2>
-        	<div class="goals">
-            	<h3>Nasze cele:</h3>
-            	<ul>
-                	<li>Zebranie jak największej liczby Polaków.</li>
+		<section id="homepage" data-aos="fade-up">
+			<h2>Witaj w Naszej Grupie!</h2>
+			<div>
+				<h3>Nasze cele:</h3>
+				<ul>
+					<li>Zebranie jak największej liczby Polaków.</li>
 					<li>Dobrze się bawić.</li>
 					<li>Utrzymać aktywność społeczności.</li>
-            	</ul>
-        	</div>
-        	<a href="#faq" class="cta-button">Przeczytaj faq</a>
-    	</section>
+				</ul>
+			</div>
+			<a href="#faq" class="cta-button">Przeczytaj FAQ</a>
+		</section>
 
-    	<section id="faq">
-        	<h2>FAQ</h2>
-        	<div class="faq-item">
-            	<h3>Jak mogę dołączyć do grupy?</h3>
-            	<p>Wystarczy zostać dodany przez znajomego, albo użyć linku:</p>
-				<p>https://chat.whatsapp.com/L0zjcT4bWld2V9T9KwBkDR</p>
-        	</div>
-        	<div class="faq-item">
-            	<h3>Czy uczestnictwo w grupie jest płatne?</h3>
-            	<p>Nie, nasza grupa jest całkowicie darmowa.</p>
-        	</div>
-        	<div class="faq-item">
-            	<h3>Kogo mogę skontaktować w razie problemów?</h3>
-            	<p>Możesz skontaktować się z administracją poprzez dm na WhatsAppie.</p>
-        	</div>
-    	</section>
+		<section id="faq" data-aos="fade-up">
+			<h2>FAQ</h2>
+			<div class="faq-item">
+				<h3>Jak mogę dołączyć do grupy?</h3>
+				<p>Wystarczy zostać dodanym przez znajomego, albo <a href="https://chat.whatsapp.com/L0zjcT4bWld2V9T9KwBkDR" target="_blank">kliknij tutaj</a>.</p>
+			</div>
+			<div class="faq-item">
+				<h3>Czy uczestnictwo w grupie jest płatne?</h3>
+				<p>Nie, nasza grupa jest całkowicie darmowa.</p>
+			</div>
+			<div class="faq-item">
+				<h3>Kogo mogę skontaktować w razie problemów?</h3>
+				<p>Możesz skontaktować się z <a href="mailto:dodajemyludzi@outlook.com">administracją</a>.</p>
+			</div>
+		</section>
 
-    	<section id="rules">
-        	<h2>Zasady</h2>
-        	<div class="rules">
-            	<ul>
-                	<li>Zakaz spamu i promocji.</li>
-                	<li>Zakaz proszenia o rangę admina i udawania członka administracji</li>
-                	<li>Nie udostępniaj treści niezgodnych z prawem.</li>
-            	</ul>
-        	</div>
-    	</section>
+		<section id="rules" data-aos="fade-up">
+			<h2>Zasady</h2>
+			<ul>
+				<li>Zakaz spamu i promocji.</li>
+				<li>Zakaz proszenia o rangę admina i udawania członka administracji.</li>
+				<li>Nie udostępniaj treści niezgodnych z prawem.</li>
+			</ul>
+		</section>
 	</main>
 
-	<footer>
-    	<p>&copy; Copyright © 2024 Dodajemy Polaków </p>
+	<footer data-aos="fade-in">
+		<p>&copy; 2024 Dodajemy Polaków</p>
 	</footer>
+
+	<!-- Skrypt AOS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
