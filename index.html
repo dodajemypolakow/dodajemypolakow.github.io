@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nasza Grupa</title>
+	<style>
+    	body {
+        	font-family: Arial, sans-serif;
+        	margin: 0;
+        	padding: 0;
+        	background-color: #f4f4f4;
+        	color: #333333;
+        	line-height: 1.6;
+    	}
+
+    	header {
+        	background-color: #1e1e1e;
+        	color: #ffffff;
+        	padding: 20px 0;
+        	text-align: center;
+        	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    	}
+
+    	nav {
+        	text-align: center;
+        	margin: 10px 0;
+    	}
+
+    	nav a {
+        	color: #1e1e1e;
+        	text-decoration: none;
+        	margin: 0 15px;
+        	font-weight: bold;
+        	padding: 5px 10px;
+        	border-radius: 5px;
+    	}
+
+    	nav a:hover {
+        	background-color: #1e1e1e;
+        	color: #ffffff;
+    	}
+
+    	main {
+        	padding: 20px;
+    	}
+
+    	h1, h2, h3 {
+        	text-align: center;
+    	}
+
+    	footer {
+        	background-color: #1e1e1e;
+        	color: #ffffff;
+        	text-align: center;
+        	padding: 10px 20px;
+        	position: fixed;
+        	bottom: 0;
+        	width: 100%;
+    	}
+
+    	.admin-list, .goals {
+        	margin: 20px auto;
+        	max-width: 800px;
+        	background: #ffffff;
+        	padding: 20px;
+        	border-radius: 10px;
+        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    	}
+
+    	.admin-list img {
+        	border-radius: 50%;
+        	width: 100px;
+        	height: 100px;
+        	margin: 10px;
+    	}
+
+    	.admin {
+        	display: flex;
+        	align-items: center;
+        	margin-bottom: 20px;
+    	}
+
+    	.admin img {
+        	margin-right: 15px;
+    	}
+
+    	.faq-item {
+        	margin-bottom: 20px;
+    	}
+
+    	.faq-item h3 {
+        	margin: 0;
+    	}
+
+    	.cta-button {
+        	display: inline-block;
+        	background-color: #1e1e1e;
+        	color: #ffffff;
+        	text-decoration: none;
+        	padding: 10px 20px;
+        	border-radius: 5px;
+        	margin-top: 20px;
+        	text-align: center;
+        	transition: background-color 0.3s;
+    	}
+
+    	.cta-button:hover {
+        	background-color: #333333;
+    	}
+
+    	.image-section {
+        	display: flex;
+        	justify-content: center;
+        	align-items: center;
+        	gap: 15px;
+        	margin-top: 20px;
+    	}
+
+    	.image-section img {
+        	max-width: 100%;
+        	height: auto;
+        	border-radius: 10px;
+        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    	}
+
+    	.rules {
+        	margin: 20px auto;
+        	max-width: 800px;
+        	background: #ffffff;
+        	padding: 20px;
+        	border-radius: 10px;
+        	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    	}
+
+    	.rules ul {
+        	list-style: none;
+        	padding: 0;
+    	}
+
+    	.rules li {
+        	margin: 10px 0;
+    	}
+	</style>
+</head>
+<body>
+	<header>
+    	<h1>Nasza Grupa</h1>
+    	<p>Łączymy ludzi i budujemy społeczność</p>
+	</header>
+
+	<nav>
+    	<a href="#homepage">Strona Główna</a>
+    	<a href="#faq">FAQ</a>
+    	<a href="#admin">Administracja</a>
+    	<a href="#rules">Zasady</a>
+	</nav>
+
+	<main>
+    	<section id="homepage">
+        	<h2>Witaj w Naszej Grupie!</h2>
+        	<div class="goals">
+            	<h3>Nasze cele:</h3>
+            	<ul>
+                	<li>Łączyć ludzi z różnych środowisk</li>
+                	<li>Wspierać wzajemną współpracę</li>
+                	<li>Tworzyć przestrzeń dla innowacji i wymiany pomysłów</li>
+            	</ul>
+        	</div>
+        	<a href="#faq" class="cta-button">Dowiedz się więcej</a>
+    	</section>
+
+    	<section id="faq">
+        	<h2>FAQ</h2>
+        	<div class="faq-item">
+            	<h3>Jak mogę dołączyć do grupy?</h3>
+            	<p>Wystarczy kliknąć na link rejestracyjny i postępować zgodnie z instrukcjami.</p>
+        	</div>
+        	<div class="faq-item">
+            	<h3>Czy uczestnictwo w grupie jest płatne?</h3>
+            	<p>Nie, nasza grupa jest całkowicie darmowa.</p>
+        	</div>
+        	<div class="faq-item">
+            	<h3>Kogo mogę skontaktować w razie problemów?</h3>
+            	<p>Możesz skontaktować się z administracją poprzez dc.</p>
+        	</div>
+    	</section>
+
+    	<section id="rules">
+        	<h2>Zasady</h2>
+        	<div class="rules">
+            	<ul>
+                	<li>Zakaz spamu i promocji.</li>
+                	<li>Zakaz proszenia o rangę admina i udawania członka administracji</li>
+                	<li>Nie udostępniaj treści niezgodnych z prawem.</li>
+            	</ul>
+        	</div>
+    	</section>
+	</main>
+
+	<footer>
+    	<p>&copy; Copyright © 2024 Dodajemy Polaków </p>
+	</footer>
+</body>
+</html>
