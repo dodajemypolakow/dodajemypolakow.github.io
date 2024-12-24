@@ -20,7 +20,8 @@
 			color: #333333;
 			line-height: 1.6;
 			min-height: 100vh;
-			overflow-x: hidden;
+			display: flex;
+			flex-direction: column;
 		}
 
 		header {
@@ -61,6 +62,7 @@
 
 		main {
 			padding: 40px 20px;
+			flex: 1;
 		}
 
 		section {
@@ -97,7 +99,7 @@
 			margin-bottom: 10px;
 		}
 
-		.cta-button {
+		.cta-button, .join-button {
 			display: inline-block;
 			background: #ff7e5f;
 			color: #ffffff;
@@ -110,18 +112,25 @@
 			transition: transform 0.3s, box-shadow 0.3s;
 		}
 
-		.cta-button:hover {
+		.cta-button:hover, .join-button:hover {
 			transform: scale(1.1);
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 		}
 
 		footer {
 			text-align: center;
-			background: #333333;
+			background: #ff7e5f;
 			color: #ffffff;
 			padding: 20px;
 			border-top-left-radius: 20px;
 			border-top-right-radius: 20px;
+			margin-top: auto; /* Gwarantuje, że stopka będzie na dole */
+		}
+
+		.join-button {
+			display: block;
+			width: max-content;
+			margin: 20px auto;
 		}
 	</style>
 </head>
@@ -155,7 +164,8 @@
 			<h2>FAQ</h2>
 			<div class="faq-item">
 				<h3>Jak mogę dołączyć do grupy?</h3>
-				<p>Wystarczy zostać dodanym przez znajomego, albo <a href="https://chat.whatsapp.com/L0zjcT4bWld2V9T9KwBkDR" target="_blank">kliknij tutaj</a>.</p>
+				<p>Wystarczy zostać dodanym przez znajomego lub kliknij poniższy przycisk, aby dołączyć:</p>
+				<a href="https://chat.whatsapp.com/L0zjcT4bWld2V9T9KwBkDR" target="_blank" class="join-button">Dołącz do Grupy</a>
 			</div>
 			<div class="faq-item">
 				<h3>Czy uczestnictwo w grupie jest płatne?</h3>
@@ -177,8 +187,8 @@
 		</section>
 	</main>
 
-	<footer data-aos="fade-in">
-		<p>&copy; 2024 Dodajemy Polaków</p>
+	<footer>
+		<p>&copy; 2024 Dodajemy Polaków. Wszelkie prawa zastrzeżone.</p>
 	</footer>
 
 	<!-- Skrypt AOS -->
